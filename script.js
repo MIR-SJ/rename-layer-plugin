@@ -1,13 +1,15 @@
 function renameLayer() {
-  const newName = document.getElementById("layerName").value;
-  if (!newName) {
-    alert("Please enter a new name for the layer.");
+  const name = document.getElementById("newName").value;
+  if (!name) {
+    alert("Please enter a new layer name.");
     return;
   }
 
   const script = `
     var doc = app.activeDocument;
-    doc.activeLayer.name = "${newName.replace(/"/g, '\\"')}";
+    if (doc && doc.activeLayer) {
+      doc.activeLayer.name = ${JSON.stringify(name)};
+    }
   `;
-  app.eval(script);
+  window.parent.postMessage({ type: "ppScript", script: script }, "*");
 }

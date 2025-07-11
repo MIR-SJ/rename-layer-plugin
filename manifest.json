@@ -8,6 +8,5 @@
   "environment": "Photopea",
   "icon": "icon.png",
   "main": "index.html",
-  "width": 300,
-  "height": 150
+  
 }

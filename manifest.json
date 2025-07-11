@@ -3,7 +3,7 @@
     "plugins": [
       {
         "name": "Rename Layer",
-        "url": "https://MIR-SJ.github.io/rename-layer-plugin/index.html",
+        "url": "https://mir-sj.github.io/rename-layer-plugin/",
         "icon": "https://MIR-SJ.github.io/rename-layer-plugin/icon.png",
        
       }

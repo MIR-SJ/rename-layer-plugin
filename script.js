@@ -1,14 +1,14 @@
 function renameLayer() {
-  const name = document.getElementById("newName").value;
-  if (!name) {
-    alert("Please enter a new layer name.");
+  const newName = document.getElementById("newName").value;
+  if (!newName) {
+    alert("Please enter a name.");
     return;
   }
 
+  // Send command to Photopea
   const script = `
-    var doc = app.activeDocument;
-    if (doc && doc.activeLayer) {
-      doc.activeLayer.name = ${JSON.stringify(name)};
+    if (app && app.activeDocument && app.activeDocument.activeLayer) {
+      app.activeDocument.activeLayer.name = ${JSON.stringify(newName)};
     }
   `;
   window.parent.postMessage({ type: "ppScript", script: script }, "*");

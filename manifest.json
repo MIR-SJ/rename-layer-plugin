@@ -1,11 +1,13 @@
 {
-  "environment": {
-    "plugins": [
-      {
-        "name": "Rename Layer",
-        "url": "https://mir-sj.github.io/rename-layer-plugin/",
-        "icon": "https://mir-sj.github.io/rename-layer-plugin/icon.png"
-      }
-    ]
-  }
+  "manifestVersion": 1,
+  "name": "Rename Layer",
+  "description": "Renames the currently selected layer in Photopea.",
+  "version": "1.0",
+  "author": "Your Name",
+  "website": "https://mir-sj.github.io/rename-layer-plugin/",
+  "environment": "Photopea",
+  "icon": "icon.png",
+  "main": "index.html",
+  "width": 300,
+  "height": 150
 }
